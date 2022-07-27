@@ -1,0 +1,98 @@
+// Home Page 
+#hero {
+    background: {
+        image: url('/img/hero4.png');
+        position: top 25% right 0;
+        size: cover;
+    };
+    height: 90vh;
+    width: 100%;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    h4 {
+        padding-bottom: 15px;
+    }
+    h1 {
+        color: #088178;
+        font-size: calc(50px + 20px);
+        letter-spacing: 0.5px;
+    }
+    button {
+        background: {
+            image: url('/img/button.png');
+            color: transparent;
+            repeat: no-repeat;
+        }
+        border: none;
+        color: #088178;
+        padding: 14px 80px 14px 65px;
+        cursor: pointer;
+        font-weight: 700;
+        font-size: 15px;
+        transition: all .3s ease;
+        &:hover {
+            color: #1a1a1a;
+        }
+    }
+}
+
+#feature {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .fe-box {
+        cursor: pointer;
+        width: 180px;
+        text-align: center;
+        padding: 25px 15px;
+        box-shadow: 20px 20px 34px rgba(0,  0, 0, 0.03);
+        border: 1px solid #cce7d0;
+        border-radius: 4px;
+        margin: 15px 0;
+        &:hover {
+            box-shadow: 10px 10px 54px rgba(70, 62, 221, 0.1);
+            img {
+                transform: scale(0.9);
+            }
+        }
+        &:nth-child(2) h6{
+            background-color: #cdebbc;
+        }
+        &:nth-child(3) h6{
+            background-color: #d1e8f2;
+        }
+        &:nth-child(4) h6{
+            background-color: #cdd4f8;
+        }
+        &:nth-child(5) h6{
+            background-color: #f6dbf6;
+        }
+        &:nth-child(6) h6{
+            background-color: #fff2e5;
+        }
+        img {
+            width: 100%;
+            margin-bottom: 10px;
+            transition: all .3s ease;
+        }
+        h6 {
+            display: inline-block;
+            padding: 9px 8px;
+            line-height: 1;
+            border-radius: 4px;
+            color: #088178;
+            background-color: #fddde4;
+        }
+    }
+}
+// Shop Page 
+
+// Single Product 
+
+// Blog Page
+
+// About Page
