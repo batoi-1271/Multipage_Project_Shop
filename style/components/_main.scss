@@ -1,38 +1,47 @@
 // Home Page 
 #hero {
-    background: {
-        image: url('/img/hero4.png');
-        position: top 25% right 0;
-        size: cover;
-    };
-    height: 90vh;
+    // height: 90vh;
     width: 100%;
-    padding: 0 80px;
-    @include flex(flex-start, center);
-    flex-direction: column;
-    h4 {
-        padding-bottom: 15px;
-    }
-    h1 {
-        color: #088178;
-        font-size: calc(50px + 20px);
-        letter-spacing: 0.5px;
-    }
-    button {
-        background: {
-            image: url('/img/button.png');
-            color: transparent;
-            repeat: no-repeat;
-        }
-        border: none;
-        color: #088178;
-        padding: 14px 80px 14px 65px;
-        cursor: pointer;
-        font-weight: 700;
-        font-size: 15px;
-        transition: all .3s ease;
-        &:hover {
-            color: #1a1a1a;
+    overflow: hidden;
+    // padding: 0 80px;
+    // @include flex(flex-start, center);
+    // flex-direction: column;
+    // background: {
+    //     image: url('/img/slide2.png');
+    //     position: top 25% right 0;
+    //     size: cover;
+    // };
+    // h4 {
+    //     padding-bottom: 15px;
+    // }
+    // h1 {
+    //     color: #088178;
+    //     font-size: calc(50px + 20px);
+    //     letter-spacing: 0.5px;
+    // }
+    // button {
+    //     background: {
+    //         image: url('/img/button.png');
+    //         color: transparent;
+    //         repeat: no-repeat;
+    //     }
+    //     border: none;
+    //     padding: 14px 80px 14px 65px;
+    //     cursor: pointer;
+    //     @include styleBase(#088178, 15px, 700);
+    //     transition: all .3s ease;
+    //     &:hover {
+    //         color: #1a1a1a;
+    //     }
+    // }
+    .img-banner {
+        width: 100%;
+        max-width: 100%;
+        height: inherit;
+        img {
+            width: 100%;
+            max-width: 100%;
+            height: inherit;
         }
     }
 }
@@ -90,9 +99,7 @@
 #product1 {
     text-align: center;
     .pro-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        @include flexWrap;
         padding-top: 20px;
         .pro {
             position: relative;
@@ -137,9 +144,7 @@
                     gap: 10px;
                     .price {
                         padding-top: 7px;
-                        font-size: 15px;
-                        font-weight: 700;
-                        color: #088178;
+                        @include styleBase(#088178, 15px, 700);
                     }
                     .price-sale {
                         color: #1a1a1a;
@@ -175,6 +180,8 @@
         image: url('/img/banner/b2.jpg');
         size: cover;
         position: center;
+        attachment: fixed;
+        
     }
     h4 {
         color: #fff;
@@ -193,6 +200,128 @@
         color: #FFF;
     }
 }
+
+// SM-BANNER 
+#sm-banner {
+    @include flexWrap;
+
+    .banner-box {
+        @include flex(flex-start, center);
+        flex-direction: column;
+        text-align: center;
+        width: 665px;
+        min-width: 580px;
+        height: 50vh;
+        padding: 30px;
+        background: {
+            image: url('/img/banner/b17.jpg');
+            size: cover;
+            position: center;
+        }
+        &:hover button{
+            background: #088178;
+            border: 1px solid #088178;
+        }
+        &:nth-child(2){
+            background: {
+                image: url('/img/banner/b10.jpg');
+            }
+        }
+        h4 {
+            @include styleBase(#fff, 20px, 300);
+        }
+        h2 {
+            @include styleBase(#fff, 28px, 800);
+            letter-spacing: 0.5px;
+        }
+        span {
+            @include styleBase(#fff, 14px, 500);
+            padding-bottom: 15px;
+        }
+    }
+}
+
+// collection
+#collection {
+    @include flexWrap;
+    padding: 0 80px;
+    .collection-box {
+        @include flex(flex-start, center);
+        flex-direction: column;
+        text-align: center;
+        min-width: 30%;
+        height: 30vh;
+        padding: 20px;
+        background: {
+            image: url('/img/banner/b7.jpg');
+            size: cover;
+            position: center;
+        }
+        &:nth-child(2) {
+            background: {
+                image: url('/img/banner/b4.jpg');
+            }
+        }
+        &:nth-child(3) {
+            background: {
+                image: url('/img/banner/b18.jpg');
+            }
+        }
+        h2 {
+            @include styleBase(#fff, 25px, 900);
+        }
+        h3 {
+            @include styleBase(#ec544e, 15px, 800);
+        }
+
+    }
+}
+
+#newLetter {
+    @include flex(center, space-between);
+    flex-wrap: wrap;
+    margin: 40px 0;
+    background: {
+        image: url('/img/banner/b14.jpg');
+        size: 20% 30%;
+        color: #041e42;
+    };
+    .newstext {
+        h4 {
+            @include styleBase(#fff,22px, 700);
+        }
+        p {
+            @include styleBase(#818ea0,14px, 600);
+            span {
+                color: #ffbd27;
+            }
+        }
+    }
+    .form {
+        display: flex;
+        width: 40%;
+        input {
+            height: 3.125rem;
+            padding: 0 1.25em;
+            font-size: 14px;
+            width: 100%;
+            border: 1px solid transparent;
+            outline: none;
+            border-radius: 4px;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+
+        }
+        button {
+            background-color: #088178;
+            color: #fff;
+            white-space: nowrap;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+    }
+}
+
 // Shop Page 
 
 // Single Product 

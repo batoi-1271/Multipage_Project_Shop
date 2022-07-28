@@ -59,6 +59,7 @@ ul {
     z-index: 99;
     p{
         color: white;
+        font-weight: 700;
     }
     &::after{
         position: absolute;
@@ -79,6 +80,18 @@ button.normal{
     border-radius: 4px;
     cursor: pointer;
     border: none;
+    outline: none;
+    transition: 0.2s;
+}
+
+button.btn-white{
+    font-size: 13px;
+    font-weight: 600;
+    padding: 11px 18px;
+    color: #fff;
+    background-color: transparent;
+    cursor: pointer;
+    border: 1px solid #fff;
     outline: none;
     transition: 0.2s;
 }

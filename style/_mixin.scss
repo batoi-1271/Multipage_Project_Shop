@@ -3,3 +3,15 @@
     align-items: $s1;
     justify-content: $s2;
 }
+
+@mixin styleBase($s1, $s2, $s3) {
+    color: $s1;
+    font-size: $s2;
+    font-weight: $s3;
+}
+
+@mixin flexWrap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
