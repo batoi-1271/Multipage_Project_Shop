@@ -1,0 +1,177 @@
+#mobile {
+    display: none;
+    align-items: center;
+}
+
+#close {
+    display: none;
+}
+
+//  START MEDIA QUERY 
+@media (max-width: 799px) {
+    .section-p1 {
+        padding: 40px 40px;
+    }
+
+    // Header start 
+    #navbar {
+        @include flex(flex-start !important, flex-start !important);
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        height: 100vh;
+        width: 300px;
+        background-color: #E3E6F3;
+        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+        padding: 80px 0 0 10px;
+        transition: all 0.3s;
+
+        li {
+            margin-bottom: 25px;
+        }
+
+        &.active {
+            right: 0px;
+        }
+    }
+
+    #mobile {
+        display: flex;
+        align-items: center;
+
+        i {
+            color: #1a1a1a;
+            font-size: 24px;
+            padding-left: 20px;
+            cursor: pointer;
+        }
+    }
+
+    #close {
+        display: initial;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        color: #222;
+        font-size: 24px;
+        transition: all 0.3s;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    #lg-bag {
+        display: none;
+    }
+
+    // FEATURE
+    #feature {
+        justify-content: center;
+
+        .fe-box {
+            margin: 15px 15px;
+        }
+    }
+
+    // Product
+    #product1 {
+        .pro-container {
+            justify-content: center;
+
+            .pro {
+                margin: 15px;
+            }
+        }
+    }
+
+    // SM-Banner
+    #sm-banner {
+        .banner-box {
+            min-width: 100%;
+            height: 30vh;
+            margin-bottom: 20px;
+        }
+    }
+
+    #collection {
+        padding: 0 40px;
+        .collection-box {
+            width: 28%;
+        }
+    }
+
+    #newLetter {
+        .form {
+            width: 70%;
+        }
+    }
+
+}
+
+@media (max-width: 620px) {
+    .section-p1 {
+        padding: 20px;
+    }
+
+    #header {
+        padding: 10px 30px;
+    }
+    // Hero start
+    #hero {
+        height: 70vh;
+
+        .img-banner {
+            width: 100%;
+            max-width: 100%;
+            height: 70vh;
+
+            img {
+                width: 100%;
+                max-width: 100%;
+                height: 70vh;
+                object-fit: cover;
+            }
+        }
+    }
+
+    #feature {
+        justify-content: space-between;
+        .fe-box {
+            width: 155px;
+            margin: 0 0 15px 0;
+        }
+    }
+
+    #product1 {
+        .pro {
+            width: 100%;
+        }
+    }
+
+    #sm-banner {
+        .banner-box {
+            height: 40vh;
+            text-align: start;
+        }
+    }
+    #collection {
+        padding: 0 20px;
+        .collection-box {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+    #newLetter {
+        padding: 40px 20px;
+        .form {
+            width: 100%;
+        }
+    }
+    footer {
+        .copyright {
+            text-align: start;
+        }
+    }
+}
