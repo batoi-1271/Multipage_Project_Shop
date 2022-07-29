@@ -376,7 +376,7 @@ button.btn-white {
   min-width: 30%;
   height: 30vh;
   padding: 20px;
-  background-image: url("/img/banner/b7.jpg");
+  background-image: url("./img/banner/b7.jpg");
   background-size: cover;
   background-position: center;
 }
