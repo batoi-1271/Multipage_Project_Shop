@@ -14,6 +14,13 @@ function start() {
         }
     }
 
+    // product to detail product
+    const product = document.querySelectorAll('.pro');
+    product.forEach((pro) => {
+        pro.onclick = () => {
+            window.location.href='s-product.html';
+        }
+    })
 }
 
 start();

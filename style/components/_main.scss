@@ -1,39 +1,7 @@
 // Home Page 
-#hero {
-    // height: 90vh;
+#hero-home {
     width: 100%;
     overflow: hidden;
-    // padding: 0 80px;
-    // @include flex(flex-start, center);
-    // flex-direction: column;
-    // background: {
-    //     image: url('/img/slide2.png');
-    //     position: top 25% right 0;
-    //     size: cover;
-    // };
-    // h4 {
-    //     padding-bottom: 15px;
-    // }
-    // h1 {
-    //     color: #088178;
-    //     font-size: calc(50px + 20px);
-    //     letter-spacing: 0.5px;
-    // }
-    // button {
-    //     background: {
-    //         image: url('/img/button.png');
-    //         color: transparent;
-    //         repeat: no-repeat;
-    //     }
-    //     border: none;
-    //     padding: 14px 80px 14px 65px;
-    //     cursor: pointer;
-    //     @include styleBase(#088178, 15px, 700);
-    //     transition: all .3s ease;
-    //     &:hover {
-    //         color: #1a1a1a;
-    //     }
-    // }
     .img-banner {
         width: 100%;
         max-width: 100%;
