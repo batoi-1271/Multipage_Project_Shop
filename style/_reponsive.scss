@@ -126,6 +126,11 @@
             width: 50%;
         }
     }
+
+    // CART page
+    #cart {
+        overflow-x: auto;
+    }
 }
 
 @media (max-width: 620px) {
@@ -261,4 +266,15 @@
         }
     }
 
+    // CART 
+    #cart-add {
+        flex-direction: column;
+        #coupon {
+            width: 100%;
+        }
+        #subtotal {
+            width: 100%;
+            padding: 20px;
+        }
+    }
 }
