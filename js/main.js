@@ -28,27 +28,44 @@ function start() {
         }
     })
 
-    // // Hover zoom img product 
-    // const imgCover = document.querySelector('.image-cover');
-    // const imgWrapper = document.querySelector('.img-Wrapper');
-    // const image = document.getElementById('mainImage');
+    // Hover zoom img product 
+    const imgCover = document.querySelector('.image-cover');
+    const imgWrapper = document.querySelector('.img-Wrapper');
+    const image = document.getElementById('mainImage');
 
-    // imgCover.addEventListener('mousemove', handelHoverImage);
+    let imageWrapperWidth = imgWrapper.offsetWidth;
+    let imageWrapperHeight = imgWrapper.offsetHeight;
 
-    // function handelHoverImage(e) {
-    //     const pX = e.pageX;
-    //     const pY = e.pageY;
-    //     image.style = 'width: auto; height: auto; max-height: unset';
-    //     let imageWidth = image.offsetWidth;
-    //     let imageHeight = image.offsetHeight;
-    //     let imageWrapperWidth = imgWrapper.offsetWidth;
-    //     let imageWrapperHeight = imgWrapper.offsetHeight;
+    imgCover.addEventListener('mousemove', handelHoverImage);
 
-    //     let x = pX;
+    function handelHoverImage(e) {
+        const pX = e.pageX;
+        const pY = e.pageY;
+        image.style = 'width: auto; height: auto; max-height: unset';
+        let imageWidth = image.offsetWidth;
+        let imageHeight = image.offsetHeight;
 
-    //     image.style = `left: ${x}px; top: ${0}px; width: auto; height: auto; max-height:unset`;
+        let spaceX = (imageWidth  / 2.5 - imageWrapperWidth) * 2;
+        let spaceY = (imageHeight / 2.5 - imageWrapperHeight) * 2;
 
-    // }
+        imageWidth = imageWidth + spaceX;
+        imageHeight = imageHeight + spaceY;
+
+        let ratioX = (imageWidth / imageWrapperWidth) / 2;
+        let ratioY = (imageHeight / imageWrapperHeight) / 2;
+
+        let x = pX * ratioX;
+        let y = pY * ratioY;
+
+        image.style = `left: ${-x}px; top: ${-y}px; width: auto; height: auto; max-height:unset; transform: none;`;
+
+    }
+
+    imgCover.addEventListener('mouseleave', handelLeaveImage);
+
+    function handelLeaveImage(e) {
+        image.style = "";
+    }
 }
 
 start();
