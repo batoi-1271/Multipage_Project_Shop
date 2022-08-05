@@ -33,6 +33,7 @@ function start() {
     const imgWrapper = document.querySelector('.img-Wrapper');
     const image = document.getElementById('mainImage');
 
+    if (!imgWrapper) return;
     let imageWrapperWidth = imgWrapper.offsetWidth;
     let imageWrapperHeight = imgWrapper.offsetHeight;
 
