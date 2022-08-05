@@ -5,12 +5,7 @@ const nav = document.getElementById('navbar');
 function start() {
     // preloader 
     const templatePreload = `<div id="preloader">
-    <div class="box">
-      <div class="lightbar"></div>
-      <div class="topLayer"></div>
-      <h2>BaToi Shop</h2>
-    </div>
-  </div>
+	    <div class="lds-facebook"><div></div><div></div><div></div></div>
     </div>`;
     document.body.insertAdjacentHTML("beforebegin", templatePreload);
 
@@ -33,7 +28,27 @@ function start() {
         }
     })
 
+    // // Hover zoom img product 
+    // const imgCover = document.querySelector('.image-cover');
+    // const imgWrapper = document.querySelector('.img-Wrapper');
+    // const image = document.getElementById('mainImage');
 
+    // imgCover.addEventListener('mousemove', handelHoverImage);
+
+    // function handelHoverImage(e) {
+    //     const pX = e.pageX;
+    //     const pY = e.pageY;
+    //     image.style = 'width: auto; height: auto; max-height: unset';
+    //     let imageWidth = image.offsetWidth;
+    //     let imageHeight = image.offsetHeight;
+    //     let imageWrapperWidth = imgWrapper.offsetWidth;
+    //     let imageWrapperHeight = imgWrapper.offsetHeight;
+
+    //     let x = pX;
+
+    //     image.style = `left: ${x}px; top: ${0}px; width: auto; height: auto; max-height:unset`;
+
+    // }
 }
 
 start();
