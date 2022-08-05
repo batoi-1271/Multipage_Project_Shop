@@ -2,16 +2,15 @@ const bar = document.getElementById('bar');
 const close = document.getElementById('close');
 const nav = document.getElementById('navbar');
 
-
-
-
-
-
-
 function start() {
     // preloader 
     const templatePreload = `<div id="preloader">
-	    <div class="lds-facebook"><div></div><div></div><div></div></div>
+    <div class="box">
+      <div class="lightbar"></div>
+      <div class="topLayer"></div>
+      <h2>BaToi Shop</h2>
+    </div>
+  </div>
     </div>`;
     document.body.insertAdjacentHTML("beforebegin", templatePreload);
 
@@ -33,6 +32,8 @@ function start() {
             window.location.href = 's-product.html';
         }
     })
+
+
 }
 
 start();
